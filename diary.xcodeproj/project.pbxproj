@@ -13,6 +13,7 @@
 		0401BD0D29365FFE003F1CEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0401BD0B29365FFE003F1CEF /* Main.storyboard */; };
 		0401BD0F29366000003F1CEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0401BD0E29366000003F1CEF /* Assets.xcassets */; };
 		0401BD1229366000003F1CEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0401BD1029366000003F1CEF /* LaunchScreen.storyboard */; };
+		045266642948E89F00ECC4B7 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045266632948E89F00ECC4B7 /* SettingTableViewController.swift */; };
 		04DA62282940C0CB00CA5B77 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04DA62272940C0CA00CA5B77 /* GoogleService-Info.plist */; };
 		04DA622C2940D75300CA5B77 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 04DA622B2940D75300CA5B77 /* FirebaseAnalytics */; };
 		04DA622E2940D75300CA5B77 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 04DA622D2940D75300CA5B77 /* FirebaseAuth */; };
@@ -20,6 +21,7 @@
 		04DA62322940D75300CA5B77 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 04DA62312940D75300CA5B77 /* FirebaseStorage */; };
 		04DA62342940E2B800CA5B77 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DA62332940E2B800CA5B77 /* CalendarViewController.swift */; };
 		04DA62372940E32000CA5B77 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 04DA62362940E32000CA5B77 /* FSCalendar */; };
+		04DEB4FE2948CBAA00F5202E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DEB4FD2948CBAA00F5202E /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +33,10 @@
 		0401BD0E29366000003F1CEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0401BD1129366000003F1CEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0401BD1329366000003F1CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		045266632948E89F00ECC4B7 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		04DA62272940C0CA00CA5B77 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		04DA62332940E2B800CA5B77 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		04DEB4FD2948CBAA00F5202E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				04DA62332940E2B800CA5B77 /* CalendarViewController.swift */,
+				045266632948E89F00ECC4B7 /* SettingTableViewController.swift */,
 				0401BD0529365FFE003F1CEF /* AppDelegate.swift */,
 				0401BD0729365FFE003F1CEF /* SceneDelegate.swift */,
 				0401BD0929365FFE003F1CEF /* ViewController.swift */,
@@ -78,6 +83,7 @@
 				0401BD0E29366000003F1CEF /* Assets.xcassets */,
 				0401BD1029366000003F1CEF /* LaunchScreen.storyboard */,
 				0401BD1329366000003F1CEF /* Info.plist */,
+				04DEB4FD2948CBAA00F5202E /* LoginViewController.swift */,
 				04DA62272940C0CA00CA5B77 /* GoogleService-Info.plist */,
 			);
 			path = diary;
@@ -166,9 +172,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045266642948E89F00ECC4B7 /* SettingTableViewController.swift in Sources */,
 				04DA62342940E2B800CA5B77 /* CalendarViewController.swift in Sources */,
 				0401BD0A29365FFE003F1CEF /* ViewController.swift in Sources */,
 				0401BD0629365FFE003F1CEF /* AppDelegate.swift in Sources */,
+				04DEB4FE2948CBAA00F5202E /* LoginViewController.swift in Sources */,
 				0401BD0829365FFE003F1CEF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
