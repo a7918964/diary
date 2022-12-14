@@ -19,7 +19,6 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ilu-Qt-FVq" customClass="FSCalendar">
                                 <rect key="frame" x="16" y="109" width="361" height="374"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="8bC-Xf-vdC" id="ZRk-Td-Sfu"/>
                                     <outlet property="delegate" destination="8bC-Xf-vdC" id="piB-ua-5hl"/>

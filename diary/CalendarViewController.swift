@@ -31,8 +31,10 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
         calendar.dataSource = self
         calendar.appearance.headerTitleColor = UIColor(named: "#3D538B")
         calendar.today = nil
-        calendar.appearance.selectionColor = UIColor(named: "#6687AD")
+        calendar.appearance.selectionColor = UIColor.blue
         calendar.appearance.weekdayTextColor = UIColor(named: "#3D538B")
+        calendar.scrollDirection = .horizontal
+        calendar.appearance.todayColor = UIColor.orange
     }
     override func viewWillAppear(_ animated: Bool) {
         //loadDateEvent()
@@ -49,9 +51,9 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
         formatter.dateFormat = "yyyy-MM-dd"
         return formatter
         }()
-    
-    
-
+    private func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) -> Int {
+        return 0
+    }
     /*
     // MARK: - Navigation
 
