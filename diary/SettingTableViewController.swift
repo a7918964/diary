@@ -89,7 +89,8 @@ class SettingTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    @IBAction func logoutAction(_ sender: UIButton) {
+    
+    @IBAction func logoutAction(_ sender: UIBarButtonItem) {
         if Auth.auth().currentUser != nil{
             do{
                 try Auth.auth().signOut()

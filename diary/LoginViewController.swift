@@ -70,7 +70,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         Auth.auth().addStateDidChangeListener{(auth,user) in
             if user != nil{
-                self.performSegue(withIdentifier: "LoginToDiary", sender: nil)
+                self.performSegue(withIdentifier: "LoginToDiary", sender: self)
             }
         }
         
