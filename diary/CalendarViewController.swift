@@ -51,8 +51,8 @@ class CalendarViewController: UIViewController,FSCalendarDelegate,FSCalendarData
         formatter.dateFormat = "yyyy-MM-dd"
         return formatter
         }()
-    private func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) -> Int {
-        return 0
+    internal func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition){
+        self.performSegue(withIdentifier: "WriteDiary", sender: self)
     }
     /*
     // MARK: - Navigation

@@ -73,7 +73,6 @@ class LoginViewController: UIViewController {
                 self.performSegue(withIdentifier: "LoginToDiary", sender: self)
             }
         }
-        
         // Do any additional setup after loading the view.
     }
     
