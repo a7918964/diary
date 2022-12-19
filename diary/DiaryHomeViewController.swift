@@ -8,8 +8,15 @@
 import UIKit
 
 class DiaryHomeViewController: UIViewController {
+    @IBAction func changePage(_ sender: UISegmentedControl) {
+        let x = CGFloat(sender.selectedSegmentIndex) * scrollView.bounds.width
+        let offset = CGPoint(x: x, y: 0)
+        scrollView.setContentOffset(offset, animated: true)
+    }
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,4 +35,10 @@ class DiaryHomeViewController: UIViewController {
     }
     */
 
+}
+extension DiaryHomeViewController : UIScrollViewDelegate{
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let index = Int(scrollView.contentOffset.x / scrollView.bounds.width)
+        segmentedControl.selectedSegmentIndex = index
+    }
 }
