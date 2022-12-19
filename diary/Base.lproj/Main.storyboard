@@ -11,7 +11,7 @@
         <!--Calendar View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CalendarViewController" customModule="diary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CalendarViewController" customModule="Stock_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,16 +34,9 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" image="pencil.circle.fill" catalog="system"/>
                                 <connections>
-                                    <segue destination="ezL-lF-HQe" kind="show" id="a47-fn-mNS"/>
+                                    <segue destination="ezL-lF-HQe" kind="show" identifier="WriteDiary" id="a47-fn-mNS"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iX4-v1-yMP">
-                                <rect key="frame" x="67" y="499" width="310" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -64,39 +57,82 @@
         <!--2022/12/10-->
         <scene sceneID="zNl-Ra-vXO">
             <objects>
-                <viewController id="ezL-lF-HQe" customClass="AddDiaryViewController" customModule="diary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ezL-lF-HQe" customClass="DiaryHomeViewController" customModule="Stock_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jaL-pQ-LEo">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="niC-hQ-8mc">
-                                <rect key="frame" x="0.0" y="111" width="393" height="455"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
-                            </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XJs-aN-nPG" userLabel="DiarySegments">
+                                <rect key="frame" x="0.0" y="103" width="393" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="eQH-iC-6rF"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Diary"/>
+                                    <segment title="Record"/>
+                                </segments>
+                            </segmentedControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1iQ-qy-Ovp">
+                                <rect key="frame" x="0.0" y="133" width="393" height="719"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rQw-Vq-Z51">
+                                        <rect key="frame" x="0.0" y="0.0" width="786" height="719"/>
+                                        <subviews>
+                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zCO-py-S2z">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="719"/>
+                                                <connections>
+                                                    <segue destination="KNa-Vt-yLb" kind="embed" id="Grb-Uy-1vx"/>
+                                                </connections>
+                                            </containerView>
+                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A0M-vf-N5Y">
+                                                <rect key="frame" x="393" y="0.0" width="393" height="719"/>
+                                                <connections>
+                                                    <segue destination="EeE-1E-j9J" kind="embed" id="dLh-xj-M02"/>
+                                                </connections>
+                                            </containerView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rQw-Vq-Z51" firstAttribute="bottom" secondItem="S9e-wW-Ee4" secondAttribute="bottom" id="0wA-o8-Iij"/>
+                                    <constraint firstItem="rQw-Vq-Z51" firstAttribute="leading" secondItem="S9e-wW-Ee4" secondAttribute="leading" id="Ens-Z4-LSR"/>
+                                    <constraint firstItem="A0M-vf-N5Y" firstAttribute="width" secondItem="tws-MZ-NS0" secondAttribute="width" id="G2m-l1-KSy"/>
+                                    <constraint firstItem="zCO-py-S2z" firstAttribute="width" secondItem="tws-MZ-NS0" secondAttribute="width" id="O7R-v1-lgF"/>
+                                    <constraint firstItem="rQw-Vq-Z51" firstAttribute="height" secondItem="tws-MZ-NS0" secondAttribute="height" id="Qks-KP-kcJ"/>
+                                    <constraint firstItem="rQw-Vq-Z51" firstAttribute="trailing" secondItem="S9e-wW-Ee4" secondAttribute="trailing" id="bhv-f0-MSL"/>
+                                    <constraint firstItem="rQw-Vq-Z51" firstAttribute="top" secondItem="S9e-wW-Ee4" secondAttribute="top" id="epE-ud-S5y"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="S9e-wW-Ee4"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="tws-MZ-NS0"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bCK-Wx-06K"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XJs-aN-nPG" firstAttribute="leading" secondItem="bCK-Wx-06K" secondAttribute="leading" id="7JW-LU-DPx"/>
+                            <constraint firstItem="bCK-Wx-06K" firstAttribute="trailing" secondItem="1iQ-qy-Ovp" secondAttribute="trailing" id="Cxv-dN-tzc"/>
+                            <constraint firstItem="1iQ-qy-Ovp" firstAttribute="leading" secondItem="bCK-Wx-06K" secondAttribute="leading" id="Viy-bS-WG7"/>
+                            <constraint firstItem="XJs-aN-nPG" firstAttribute="top" secondItem="bCK-Wx-06K" secondAttribute="top" id="fWN-Jb-LfW"/>
+                            <constraint firstAttribute="bottom" secondItem="1iQ-qy-Ovp" secondAttribute="bottom" id="jl0-ih-uJS"/>
+                            <constraint firstItem="1iQ-qy-Ovp" firstAttribute="top" secondItem="XJs-aN-nPG" secondAttribute="bottom" id="peo-ed-hb8"/>
+                            <constraint firstItem="XJs-aN-nPG" firstAttribute="trailing" secondItem="bCK-Wx-06K" secondAttribute="trailing" id="zXN-DP-QMk"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="2022/12/10" id="pnd-P8-7Di">
-                        <rightBarButtonItems>
-                            <barButtonItem title="Done" id="MoW-bj-fhq"/>
-                            <barButtonItem image="plus" catalog="system" id="3oS-ir-unb"/>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="MoW-bj-fhq"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="diaryTextView" destination="niC-hQ-8mc" id="wjX-tL-Sfi"/>
+                        <outlet property="segmentedControl" destination="XJs-aN-nPG" id="xRi-C6-UUY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOL-3R-3AE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2911" y="4"/>
+            <point key="canvasLocation" x="2910.6870229007632" y="3.5211267605633805"/>
         </scene>
         <!--Setting Table View Controller-->
         <scene sceneID="KOJ-pY-Qgd">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="hPU-Em-1du" customClass="SettingTableViewController" customModule="diary" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="hPU-Em-1du" customClass="SettingTableViewController" customModule="Stock_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Ohl-5J-aeL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -162,7 +198,7 @@
         <!--Login View Controller-->
         <scene sceneID="nxj-Kl-J08">
             <objects>
-                <viewController id="WNu-38-wur" customClass="LoginViewController" customModule="diary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WNu-38-wur" customClass="LoginViewController" customModule="Stock_Diary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5it-eX-gMl">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -881,6 +917,50 @@
             </objects>
             <point key="canvasLocation" x="946" y="823"/>
         </scene>
+        <!--Add Diary View Controller-->
+        <scene sceneID="6up-vY-YQI">
+            <objects>
+                <viewController id="KNa-Vt-yLb" customClass="AddDiaryViewController" customModule="Stock_Diary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1VX-ST-pDk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zlT-wK-Wln">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zlT-wK-Wln" firstAttribute="leading" secondItem="1VX-ST-pDk" secondAttribute="leading" id="7Eb-UO-uD7"/>
+                            <constraint firstItem="zlT-wK-Wln" firstAttribute="top" secondItem="1VX-ST-pDk" secondAttribute="top" id="9Nm-md-kUf"/>
+                            <constraint firstAttribute="trailing" secondItem="zlT-wK-Wln" secondAttribute="trailing" id="baz-jF-1CP"/>
+                            <constraint firstAttribute="bottom" secondItem="zlT-wK-Wln" secondAttribute="bottom" id="kmq-Ey-ODF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jqb-Th-8u2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4238.9312977099235" y="-270.07042253521126"/>
+        </scene>
+        <!--Stock Record View Controller-->
+        <scene sceneID="G1i-LF-dBH">
+            <objects>
+                <viewController id="EeE-1E-j9J" customClass="StockRecordViewController" customModule="Stock_Diary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fWd-10-Kz3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="749"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7rm-KS-e5H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4238.9312977099235" y="394.71830985915494"/>
+        </scene>
     </scenes>
     <resources>
         <image name="book" catalog="system" width="128" height="99"/>
@@ -891,7 +971,6 @@
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="pencil.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

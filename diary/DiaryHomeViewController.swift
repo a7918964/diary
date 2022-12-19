@@ -1,18 +1,22 @@
 //
-//  AddDiaryViewController.swift
-//  diary
+//  DiaryHomeViewController.swift
+//  Stock Diary
 //
-//  Created by Gary on 2022/12/15.
+//  Created by Gary on 2022/12/19.
 //
 
 import UIKit
 
-class AddDiaryViewController: UIViewController {
-
+class DiaryHomeViewController: UIViewController {
+    
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
+    
 
     /*
     // MARK: - Navigation
