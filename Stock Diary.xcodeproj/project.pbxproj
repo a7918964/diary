@@ -17,6 +17,7 @@
 		0452666C294B4E3500ECC4B7 /* AddDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452666B294B4E3500ECC4B7 /* AddDiaryViewController.swift */; };
 		04C0D08D2950BA71001F1CD7 /* DiaryHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0D08C2950BA71001F1CD7 /* DiaryHomeViewController.swift */; };
 		04C0D08F2950BA85001F1CD7 /* StockRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0D08E2950BA85001F1CD7 /* StockRecordViewController.swift */; };
+		04C0D0912952F8EC001F1CD7 /* record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0D0902952F8EC001F1CD7 /* record.swift */; };
 		04DA62282940C0CB00CA5B77 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04DA62272940C0CA00CA5B77 /* GoogleService-Info.plist */; };
 		04DA622C2940D75300CA5B77 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 04DA622B2940D75300CA5B77 /* FirebaseAnalytics */; };
 		04DA622E2940D75300CA5B77 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 04DA622D2940D75300CA5B77 /* FirebaseAuth */; };
@@ -40,6 +41,7 @@
 		0452666B294B4E3500ECC4B7 /* AddDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiaryViewController.swift; sourceTree = "<group>"; };
 		04C0D08C2950BA71001F1CD7 /* DiaryHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryHomeViewController.swift; sourceTree = "<group>"; };
 		04C0D08E2950BA85001F1CD7 /* StockRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRecordViewController.swift; sourceTree = "<group>"; };
+		04C0D0902952F8EC001F1CD7 /* record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = record.swift; sourceTree = "<group>"; };
 		04DA62272940C0CA00CA5B77 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		04DA62332940E2B800CA5B77 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		04DEB4FD2948CBAA00F5202E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				0401BD1329366000003F1CEF /* Info.plist */,
 				04DEB4FD2948CBAA00F5202E /* LoginViewController.swift */,
 				04DA62272940C0CA00CA5B77 /* GoogleService-Info.plist */,
+				04C0D0902952F8EC001F1CD7 /* record.swift */,
 			);
 			path = diary;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				0401BD0A29365FFE003F1CEF /* ViewController.swift in Sources */,
 				0401BD0629365FFE003F1CEF /* AppDelegate.swift in Sources */,
 				04DEB4FE2948CBAA00F5202E /* LoginViewController.swift in Sources */,
+				04C0D0912952F8EC001F1CD7 /* record.swift in Sources */,
 				0401BD0829365FFE003F1CEF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

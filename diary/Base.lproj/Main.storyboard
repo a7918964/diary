@@ -90,7 +90,7 @@
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A0M-vf-N5Y">
                                                 <rect key="frame" x="393" y="0.0" width="393" height="719"/>
                                                 <connections>
-                                                    <segue destination="EeE-1E-j9J" kind="embed" id="dLh-xj-M02"/>
+                                                    <segue destination="Hc8-oz-HPZ" kind="embed" id="0MR-Cc-OvV"/>
                                                 </connections>
                                             </containerView>
                                         </subviews>
@@ -125,7 +125,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="2022/12/10" id="pnd-P8-7Di">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="MoW-bj-fhq"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="MoW-bj-fhq"/>
                     </navigationItem>
                     <connections>
                         <outlet property="scrollView" destination="1iQ-qy-Ovp" id="fEd-kb-WBK"/>
@@ -941,6 +941,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="DnS-X2-DKg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zlT-wK-Wln" firstAttribute="leading" secondItem="1VX-ST-pDk" secondAttribute="leading" id="7Eb-UO-uD7"/>
@@ -954,19 +955,33 @@
             </objects>
             <point key="canvasLocation" x="4238.9312977099235" y="-270.07042253521126"/>
         </scene>
-        <!--Stock Record View Controller-->
-        <scene sceneID="G1i-LF-dBH">
+        <!--Table View Controller-->
+        <scene sceneID="ECR-v8-VV8">
             <objects>
-                <viewController id="EeE-1E-j9J" customClass="StockRecordViewController" customModule="Stock_Diary" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fWd-10-Kz3">
+                <tableViewController id="Hc8-oz-HPZ" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="4Zv-gM-oYj">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="719"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7rm-KS-e5H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="O6Q-0q-Fk2">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O6Q-0q-Fk2" id="v1K-T7-M8N">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Hc8-oz-HPZ" id="0H2-go-Ixu"/>
+                            <outlet property="delegate" destination="Hc8-oz-HPZ" id="dG4-F7-WTJ"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C2P-Cq-J3V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4238.9312977099235" y="394.71830985915494"/>
+            <point key="canvasLocation" x="4239" y="443"/>
         </scene>
     </scenes>
     <resources>
