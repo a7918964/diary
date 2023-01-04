@@ -15,6 +15,7 @@
 		0401BD1229366000003F1CEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0401BD1029366000003F1CEF /* LaunchScreen.storyboard */; };
 		045266642948E89F00ECC4B7 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045266632948E89F00ECC4B7 /* SettingTableViewController.swift */; };
 		0452666C294B4E3500ECC4B7 /* AddDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452666B294B4E3500ECC4B7 /* AddDiaryViewController.swift */; };
+		04B9F9F029645CB00043BC1C /* DiaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B9F9EF29645CB00043BC1C /* DiaryTableViewController.swift */; };
 		04C0D08D2950BA71001F1CD7 /* DiaryHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0D08C2950BA71001F1CD7 /* DiaryHomeViewController.swift */; };
 		04C0D08F2950BA85001F1CD7 /* StockRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0D08E2950BA85001F1CD7 /* StockRecordViewController.swift */; };
 		04C0D0912952F8EC001F1CD7 /* record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0D0902952F8EC001F1CD7 /* record.swift */; };
@@ -29,7 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0401BD0229365FFE003F1CEF /* Stock Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stock Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0401BD0229365FFE003F1CEF /* Trading Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trading Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0401BD0529365FFE003F1CEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0401BD0729365FFE003F1CEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0401BD0929365FFE003F1CEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +40,7 @@
 		0401BD1329366000003F1CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		045266632948E89F00ECC4B7 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 		0452666B294B4E3500ECC4B7 /* AddDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiaryViewController.swift; sourceTree = "<group>"; };
+		04B9F9EF29645CB00043BC1C /* DiaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewController.swift; sourceTree = "<group>"; };
 		04C0D08C2950BA71001F1CD7 /* DiaryHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryHomeViewController.swift; sourceTree = "<group>"; };
 		04C0D08E2950BA85001F1CD7 /* StockRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRecordViewController.swift; sourceTree = "<group>"; };
 		04C0D0902952F8EC001F1CD7 /* record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = record.swift; sourceTree = "<group>"; };
@@ -74,7 +76,7 @@
 		0401BD0329365FFE003F1CEF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0401BD0229365FFE003F1CEF /* Stock Diary.app */,
+				0401BD0229365FFE003F1CEF /* Trading Diary.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +96,7 @@
 				0401BD0E29366000003F1CEF /* Assets.xcassets */,
 				0401BD1029366000003F1CEF /* LaunchScreen.storyboard */,
 				0401BD1329366000003F1CEF /* Info.plist */,
+				04B9F9EF29645CB00043BC1C /* DiaryTableViewController.swift */,
 				04DEB4FD2948CBAA00F5202E /* LoginViewController.swift */,
 				04DA62272940C0CA00CA5B77 /* GoogleService-Info.plist */,
 				04C0D0902952F8EC001F1CD7 /* record.swift */,
@@ -104,9 +107,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0401BD0129365FFE003F1CEF /* Stock Diary */ = {
+		0401BD0129365FFE003F1CEF /* Trading Diary */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0401BD1629366000003F1CEF /* Build configuration list for PBXNativeTarget "Stock Diary" */;
+			buildConfigurationList = 0401BD1629366000003F1CEF /* Build configuration list for PBXNativeTarget "Trading Diary" */;
 			buildPhases = (
 				0401BCFE29365FFE003F1CEF /* Sources */,
 				0401BCFF29365FFE003F1CEF /* Frameworks */,
@@ -116,7 +119,7 @@
 			);
 			dependencies = (
 			);
-			name = "Stock Diary";
+			name = "Trading Diary";
 			packageProductDependencies = (
 				04DA622B2940D75300CA5B77 /* FirebaseAnalytics */,
 				04DA622D2940D75300CA5B77 /* FirebaseAuth */,
@@ -125,7 +128,7 @@
 				04DA62362940E32000CA5B77 /* FSCalendar */,
 			);
 			productName = diary;
-			productReference = 0401BD0229365FFE003F1CEF /* Stock Diary.app */;
+			productReference = 0401BD0229365FFE003F1CEF /* Trading Diary.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -143,7 +146,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0401BCFD29365FFE003F1CEF /* Build configuration list for PBXProject "Stock Diary" */;
+			buildConfigurationList = 0401BCFD29365FFE003F1CEF /* Build configuration list for PBXProject "Trading Diary" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -160,7 +163,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0401BD0129365FFE003F1CEF /* Stock Diary */,
+				0401BD0129365FFE003F1CEF /* Trading Diary */,
 			);
 		};
 /* End PBXProject section */
@@ -186,6 +189,7 @@
 			files = (
 				045266642948E89F00ECC4B7 /* SettingTableViewController.swift in Sources */,
 				04C0D08D2950BA71001F1CD7 /* DiaryHomeViewController.swift in Sources */,
+				04B9F9F029645CB00043BC1C /* DiaryTableViewController.swift in Sources */,
 				04DA62342940E2B800CA5B77 /* CalendarViewController.swift in Sources */,
 				0452666C294B4E3500ECC4B7 /* AddDiaryViewController.swift in Sources */,
 				04C0D08F2950BA85001F1CD7 /* StockRecordViewController.swift in Sources */,
@@ -343,7 +347,7 @@
 				DEVELOPMENT_TEAM = H5U4CXZL45;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = diary/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Stock Diary";
+				INFOPLIST_KEY_CFBundleDisplayName = "Trading Diary";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -356,7 +360,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "gary.tw.Stock-Diary";
+				PRODUCT_BUNDLE_IDENTIFIER = "gary.tw.Trading-Diary";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -374,7 +378,7 @@
 				DEVELOPMENT_TEAM = H5U4CXZL45;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = diary/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Stock Diary";
+				INFOPLIST_KEY_CFBundleDisplayName = "Trading Diary";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -387,7 +391,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "gary.tw.Stock-Diary";
+				PRODUCT_BUNDLE_IDENTIFIER = "gary.tw.Trading-Diary";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -398,7 +402,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0401BCFD29365FFE003F1CEF /* Build configuration list for PBXProject "Stock Diary" */ = {
+		0401BCFD29365FFE003F1CEF /* Build configuration list for PBXProject "Trading Diary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0401BD1429366000003F1CEF /* Debug */,
@@ -407,7 +411,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0401BD1629366000003F1CEF /* Build configuration list for PBXNativeTarget "Stock Diary" */ = {
+		0401BD1629366000003F1CEF /* Build configuration list for PBXNativeTarget "Trading Diary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0401BD1729366000003F1CEF /* Debug */,

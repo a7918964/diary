@@ -8,45 +8,24 @@
 import Foundation
 
 struct Record:Codable{
-    var title:String
+    var date:String
+    var diary:String
+    var DayTrade:Int //當日損益
+    var equity:Int //權益數
     
-    static let documentDirectoy = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-    static let key = "record"
     
-    static func saveToFile(records:[Record]){
-        let propertyEncoder = PropertyListEncoder()
-        
-        if let data = try? propertyEncoder.encode(records){
-            let url = Record.documentDirectoy.appending(path: key)
-            try? data.write(to: url)
-        }
+    static let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+    
+    static func saveRecord(_ record:[Record]){
+        let encoder = JSONEncoder()
+        guard let data = try? encoder.encode(record) else {return}
+        let url = documentsDirectory.appending(path: "record")
+        try? data.write(to: url)
     }
-    
-    static func readFromFile() -> [Record]?{
-        let propertyDecoder = PropertyListDecoder()
-        let url = Record.documentDirectoy.appending(path: key)
-        if let data = try? Data(contentsOf: url), let records = try? propertyDecoder.decode([Record].self, from: data){
-            return records
-        }else{
-            return nil
-        }
+    static func loadRecord() -> [Record]? {
+        let url = documentsDirectory.appending(path: "record")
+        guard let data = try? Data(contentsOf: url) else {return nil}
+        let decoder = JSONDecoder()
+        return try? decoder.decode([Record].self, from: data)
     }
-    
-    static func deleteFile(){
-        do{
-            let url = Record.documentDirectoy.appending(path: key)
-            try FileManager.default.removeItem(at: url)
-        }catch{
-            print(error.localizedDescription)
-        }
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }
