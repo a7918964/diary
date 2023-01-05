@@ -8,6 +8,10 @@
 import UIKit
 
 class DiaryHomeViewController: UIViewController {
+    
+    var record:Record?
+    
+    
     @IBAction func changePage(_ sender: UISegmentedControl) {
         let x = CGFloat(sender.selectedSegmentIndex) * scrollView.bounds.width
         let offset = CGPoint(x: x, y: 0)

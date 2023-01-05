@@ -9,9 +9,11 @@ import Foundation
 
 struct Record:Codable{
     var date:String
+    var year:String
+    var month:String
     var diary:String
-    var DayTrade:Int //當日損益
-    var equity:Int //權益數
+    var DayTrade:String //當日損益
+    var equity:String //權益數
     
     
     static let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!

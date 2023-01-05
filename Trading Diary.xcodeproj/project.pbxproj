@@ -19,6 +19,9 @@
 		04C0D08D2950BA71001F1CD7 /* DiaryHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0D08C2950BA71001F1CD7 /* DiaryHomeViewController.swift */; };
 		04C0D08F2950BA85001F1CD7 /* StockRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0D08E2950BA85001F1CD7 /* StockRecordViewController.swift */; };
 		04C0D0912952F8EC001F1CD7 /* record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0D0902952F8EC001F1CD7 /* record.swift */; };
+		04D1617B296598F100EB9BC9 /* AddRecordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D1617A296598F000EB9BC9 /* AddRecordTableViewController.swift */; };
+		04D1617D2965A1D000EB9BC9 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D1617C2965A1D000EB9BC9 /* RecordTableViewCell.swift */; };
+		04D161802966F85800EB9BC9 /* AddDiaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D1617F2966F85800EB9BC9 /* AddDiaryTableViewController.swift */; };
 		04DA62282940C0CB00CA5B77 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04DA62272940C0CA00CA5B77 /* GoogleService-Info.plist */; };
 		04DA622C2940D75300CA5B77 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 04DA622B2940D75300CA5B77 /* FirebaseAnalytics */; };
 		04DA622E2940D75300CA5B77 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 04DA622D2940D75300CA5B77 /* FirebaseAuth */; };
@@ -44,6 +47,9 @@
 		04C0D08C2950BA71001F1CD7 /* DiaryHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryHomeViewController.swift; sourceTree = "<group>"; };
 		04C0D08E2950BA85001F1CD7 /* StockRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRecordViewController.swift; sourceTree = "<group>"; };
 		04C0D0902952F8EC001F1CD7 /* record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = record.swift; sourceTree = "<group>"; };
+		04D1617A296598F000EB9BC9 /* AddRecordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecordTableViewController.swift; sourceTree = "<group>"; };
+		04D1617C2965A1D000EB9BC9 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
+		04D1617F2966F85800EB9BC9 /* AddDiaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiaryTableViewController.swift; sourceTree = "<group>"; };
 		04DA62272940C0CA00CA5B77 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		04DA62332940E2B800CA5B77 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		04DEB4FD2948CBAA00F5202E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -89,19 +95,30 @@
 				04C0D08E2950BA85001F1CD7 /* StockRecordViewController.swift */,
 				0401BD0529365FFE003F1CEF /* AppDelegate.swift */,
 				0401BD0729365FFE003F1CEF /* SceneDelegate.swift */,
-				04C0D08C2950BA71001F1CD7 /* DiaryHomeViewController.swift */,
 				0401BD0929365FFE003F1CEF /* ViewController.swift */,
 				0401BD0B29365FFE003F1CEF /* Main.storyboard */,
-				0452666B294B4E3500ECC4B7 /* AddDiaryViewController.swift */,
 				0401BD0E29366000003F1CEF /* Assets.xcassets */,
 				0401BD1029366000003F1CEF /* LaunchScreen.storyboard */,
 				0401BD1329366000003F1CEF /* Info.plist */,
+				04D1617F2966F85800EB9BC9 /* AddDiaryTableViewController.swift */,
+				04D1617E2966F59000EB9BC9 /* Next Phase */,
 				04B9F9EF29645CB00043BC1C /* DiaryTableViewController.swift */,
-				04DEB4FD2948CBAA00F5202E /* LoginViewController.swift */,
+				04D1617C2965A1D000EB9BC9 /* RecordTableViewCell.swift */,
 				04DA62272940C0CA00CA5B77 /* GoogleService-Info.plist */,
 				04C0D0902952F8EC001F1CD7 /* record.swift */,
 			);
 			path = diary;
+			sourceTree = "<group>";
+		};
+		04D1617E2966F59000EB9BC9 /* Next Phase */ = {
+			isa = PBXGroup;
+			children = (
+				04DEB4FD2948CBAA00F5202E /* LoginViewController.swift */,
+				0452666B294B4E3500ECC4B7 /* AddDiaryViewController.swift */,
+				04C0D08C2950BA71001F1CD7 /* DiaryHomeViewController.swift */,
+				04D1617A296598F000EB9BC9 /* AddRecordTableViewController.swift */,
+			);
+			path = "Next Phase";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,7 +208,10 @@
 				04C0D08D2950BA71001F1CD7 /* DiaryHomeViewController.swift in Sources */,
 				04B9F9F029645CB00043BC1C /* DiaryTableViewController.swift in Sources */,
 				04DA62342940E2B800CA5B77 /* CalendarViewController.swift in Sources */,
+				04D1617D2965A1D000EB9BC9 /* RecordTableViewCell.swift in Sources */,
+				04D1617B296598F100EB9BC9 /* AddRecordTableViewController.swift in Sources */,
 				0452666C294B4E3500ECC4B7 /* AddDiaryViewController.swift in Sources */,
+				04D161802966F85800EB9BC9 /* AddDiaryTableViewController.swift in Sources */,
 				04C0D08F2950BA85001F1CD7 /* StockRecordViewController.swift in Sources */,
 				0401BD0A29365FFE003F1CEF /* ViewController.swift in Sources */,
 				0401BD0629365FFE003F1CEF /* AppDelegate.swift in Sources */,
