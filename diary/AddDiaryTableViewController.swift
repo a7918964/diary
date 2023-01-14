@@ -14,13 +14,19 @@ class AddDiaryTableViewController: UITableViewController {
     @IBOutlet weak var equity: UITextField!
     @IBOutlet weak var dayTrade: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
-//    var pickerDate = datePicker.date
-//    let dateComponents = Calendar.current.dateComponents(in: TimeZone.current, from: pickerDate)
-//    let month =
+    
+    
+    @IBAction func dateChange(_ sender: UIDatePicker) {
+        let chooseDate = datePicker.date
+        let dateComponents = Calendar.current.dateComponents(in: TimeZone.current, from: chooseDate)
+        let weekday = dateComponents.weekday!
+        let month = dateComponents.month!
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -95,9 +101,9 @@ class AddDiaryTableViewController: UITableViewController {
         let diary = diary.text ?? ""
         let equity = equity.text ?? ""
         let dayTrade = dayTrade.text ?? ""
-        let date = datePicker.date.description
-        let year = "2023"
-        let month = "Jaunary"
+        let date = ""
+        let year = ""
+        let month = ""
         
         record = Record(date: date, year: year, month: month, diary: diary, DayTrade: dayTrade, equity: equity)
     }

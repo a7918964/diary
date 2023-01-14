@@ -181,6 +181,9 @@
                                                     <date key="maximumDate" timeIntervalSinceReferenceDate="946638000">
                                                         <!--2030-12-31 11:00:00 +0000-->
                                                     </date>
+                                                    <connections>
+                                                        <action selector="dateChange:" destination="iQU-Hz-yum" eventType="valueChanged" id="s5R-Rm-m5b"/>
+                                                    </connections>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>
@@ -996,11 +999,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2wX-VI-DBk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2911" y="-737"/>
+            <point key="canvasLocation" x="4236" y="-737"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="5lr-CH-Zd7"/>
+        <segue reference="GJY-9P-Ong"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="book" catalog="system" width="128" height="99"/>
